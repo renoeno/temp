@@ -3,7 +3,9 @@ import classes from "./Layout.module.css";
 const Layout = (props) => {
   return (
     <>
-      <main className={classes.main}>{props.children}</main>
+      <div className={`${classes[props.classes]} ${classes.container}`}>
+        <main className={classes.main}>{props.children}</main>
+      </div>
     </>
   );
 };

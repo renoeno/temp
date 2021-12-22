@@ -9,7 +9,7 @@
   font-weight: 100;
   text-align: center;
   border-radius: 2rem;
-  border: 1px solid #aaa;
+  border: none;
   height: 3rem;
   outline: 0;
   padding: 1rem;
@@ -36,7 +36,8 @@
   border-radius: 2rem;
   font-weight: 100;
   font-size: 1.2rem;
-  border: 1px solid #aaa;
+  background-color: white;
+  border: none;
   padding: 0;
 }
 
@@ -50,4 +51,8 @@
 
 .search ul li:not(:last-child) {
   border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+.search ul li:first-child {
+  border-top: 1px solid rgba(170, 170, 170, 0.3);
 }

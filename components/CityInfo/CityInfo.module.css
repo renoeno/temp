@@ -16,12 +16,6 @@
   font-size: 12rem;
 }
 
-.loaded {
-}
-
-.notLoaded {
-}
-
 @keyframes showCityInfo {
   0% {
     opacity: 0;

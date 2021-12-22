@@ -3,7 +3,7 @@
   margin: 0 auto;
   justify-content: center;
   font-family: "Helvetica Neue", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
 }
 
@@ -17,7 +17,4 @@
 
 .selected {
   border-bottom: solid 3px black;
-}
-
-.unselected {
 }
