@@ -1,0 +1,37 @@
+.cityInfo {
+  font-family: "HelveticaNeue-CondensedBlack", sans-serif;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+  animation: showCityInfo 3s;
+}
+
+.cityInfo span {
+  margin-bottom: 0;
+}
+
+.cityName {
+  font-size: 12rem;
+}
+
+.loaded {
+}
+
+.notLoaded {
+}
+
+@keyframes showCityInfo {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

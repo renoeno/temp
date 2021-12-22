@@ -1,9 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;1,100&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica Neue, sans-serif;
+  background-image: linear-gradient(#99ffff, #488fcd);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: "HelveticaNeue-CondensedBlack", sans-serif;
+  font-size: 10rem;
 }
 
 a {
