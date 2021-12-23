@@ -1,11 +1,12 @@
 import Head from "next/head";
+import Layout from "../components/layout/Layout";
 
 import SearchBox from "../components/searchbox/SearchBox";
 import LanguageSelector from "../components/UI/LanguageSelector";
 
 const Home = () => {
   return (
-    <div>
+    <Layout>
       <Head>
         <title>Temp</title>
         <meta name="description" content="A pretty weather app" />
@@ -14,7 +15,7 @@ const Home = () => {
       <LanguageSelector />
       <h1>Temp</h1>
       <SearchBox />
-    </div>
+    </Layout>
   );
 };
 

@@ -1,20 +1,22 @@
 import { useContext, useEffect, useState } from "react";
 
+import useHours from "../../hooks/use-hours";
+
 import { TempContext } from "../../store/temp-context";
 
 import LoadingSpinner from "../UI/LoadingSpinner";
 
-const convertTime = (offset) => {
-  const date = new Date();
-  const localTime = date.getTime();
-  const localOffset = date.getTimezoneOffset() * 60000;
+// const convertTime = (offset) => {
+//   const date = new Date();
+//   const localTime = date.getTime();
+//   const localOffset = date.getTimezoneOffset() * 60000;
 
-  //London hour
-  const utc = localTime + localOffset;
-  const currentTime = utc + 3600000 * offset;
+//   //London hour
+//   const utc = localTime + localOffset;
+//   const currentTime = utc + 3600000 * offset;
 
-  return currentTime;
-};
+//   return currentTime;
+// };
 
 const TimeDisplay = (props) => {
   const tempCtx = useContext(TempContext);
@@ -22,8 +24,8 @@ const TimeDisplay = (props) => {
   const [time, setTime] = useState("");
 
   useEffect(() => {
-    const convertedTime = convertTime(props.offset);
-    const date = new Date(convertedTime);
+    const convertedTime = useHours(props.offset);
+    const date = new Date(convertedTime.currentHour);
     const hours =
       date.getHours().toString().length < 2
         ? "0" + date.getHours()
@@ -50,8 +52,8 @@ const TimeDisplay = (props) => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const convertedTime = convertTime(props.offset);
-      const date = new Date(convertedTime);
+      const convertedTime = useHours(props.offset);
+      const date = new Date(convertedTime.currentHour);
       const hours =
         date.getHours().toString().length < 2
           ? "0" + date.getHours()
@@ -72,7 +74,7 @@ const TimeDisplay = (props) => {
       console.log("CLEAN UP");
       clearInterval(timer);
     };
-  }, [convertTime, setTime]);
+  }, [setTime]);
 
   return (
     <>

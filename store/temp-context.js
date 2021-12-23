@@ -3,14 +3,17 @@ import React, { useState } from "react";
 export const TempContext = React.createContext({
   language: "",
   isLoading: false,
+  periodClass: "",
   startLoading: () => {},
   stopLoading: () => {},
   switchLanguage: (language) => {},
+  changePeriodClass: (hClass) => {},
 });
 
 const TempContextProvider = (props) => {
   const [language, setLanguage] = useState("en");
   const [isLoading, setIsLoading] = useState(false);
+  const [periodClass, setPeriodClass] = useState("");
 
   const switchLanguageHandler = (language) => {
     setLanguage(language);
@@ -18,20 +21,25 @@ const TempContextProvider = (props) => {
 
   const startLoadingHandler = () => {
     setIsLoading(true);
-    console.log("carregando");
   };
 
   const stopLoadingHandler = () => {
     setIsLoading(false);
-    console.log("carregou");
+  };
+
+  const changePeriodClassHandler = (hClass) => {
+    setPeriodClass(hClass);
+    console.log(periodClass);
   };
 
   const contextValue = {
     language: language,
     isLoading: isLoading,
+    periodClass: periodClass,
     startLoading: startLoadingHandler,
     stopLoading: stopLoadingHandler,
     switchLanguage: switchLanguageHandler,
+    changePeriodClass: changePeriodClassHandler,
   };
 
   return (

@@ -1,4 +1,5 @@
 import CityInfo from "../../components/CityInfo/CityInfo";
+import Layout from "../../components/layout/Layout";
 
 import cities from "../../lib/city.list.json";
 
@@ -25,16 +26,30 @@ const getCity = (param) => {
   }
 };
 
+// const convertTime = (offset) => {
+//   const date = new Date();
+//   const localTime = date.getTime();
+//   const localOffset = date.getTimezoneOffset() * 60000;
+
+//   //London hour
+//   const utc = localTime + localOffset;
+//   const currentTime = utc + 3600000 * offset;
+
+//   return new Date(currentTime);
+// };
+
 const City = (props) => {
   return (
-    <>
+    <Layout>
       <CityInfo
         cityName={props.city.name}
         weather={props.currentWeather}
         temperature={props.temperature}
         offset={props.offset}
+        sunrise={props.sunrise}
+        sunset={props.sunset}
       />
-    </>
+    </Layout>
   );
 };
 
@@ -58,6 +73,8 @@ export async function getServerSideProps(context) {
     return { notFound: true };
   }
 
+  console.log(data);
+
   const slug = context.params.city;
 
   //   return {
@@ -72,6 +89,8 @@ export async function getServerSideProps(context) {
         data.current.weather[0].description.slice(1),
       offset: data.timezone_offset / 3600,
       temperature: data.current.temp,
+      sunrise: data.current.sunrise * 1000,
+      sunset: data.current.sunset * 1000,
     },
   };
 }
