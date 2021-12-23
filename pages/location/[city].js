@@ -44,6 +44,7 @@ const City = (props) => {
       <CityInfo
         cityName={props.city.name}
         weather={props.currentWeather}
+        condition={props.weatherCondition}
         temperature={props.temperature}
         offset={props.offset}
         sunrise={props.sunrise}
@@ -87,8 +88,9 @@ export async function getServerSideProps(context) {
       currentWeather:
         data.current.weather[0].description.charAt(0).toUpperCase() +
         data.current.weather[0].description.slice(1),
-      offset: data.timezone_offset / 3600,
+      weatherCondition: data.current.weather[0].main,
       temperature: data.current.temp,
+      offset: data.timezone_offset / 3600,
       sunrise: data.current.sunrise * 1000,
       sunset: data.current.sunset * 1000,
     },
