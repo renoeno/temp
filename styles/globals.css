@@ -22,3 +22,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 6rem;
+  }
+}

@@ -18,3 +18,19 @@
 .selected {
   border-bottom: solid 3px black;
 }
+
+@media (max-width: 480px) {
+  .selected {
+    border-bottom: solid 2px black;
+  }
+}
+
+@media (max-width: 320px) {
+  .languageSelector {
+    font-size: 1rem;
+  }
+
+  .selected {
+    border-bottom: solid 1px black;
+  }
+}

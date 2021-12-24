@@ -5,7 +5,7 @@
   flex-direction: column;
   text-align: center;
   margin-top: 2rem;
-  animation: showCityInfo 3s;
+  animation: showCityInfo 4s;
 }
 
 .cityInfo span {
@@ -14,6 +14,36 @@
 
 .cityName {
   font-size: 12rem;
+}
+
+@media (max-width: 768px) {
+  .cityName {
+    font-size: 8rem;
+  }
+
+  .cityInfo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cityName {
+    font-size: 6rem;
+  }
+
+  .cityInfo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .cityName {
+    font-size: 4rem;
+  }
+
+  .cityInfo {
+    font-size: 2rem;
+  }
 }
 
 @keyframes showCityInfo {

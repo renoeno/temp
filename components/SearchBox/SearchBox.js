@@ -61,6 +61,9 @@ const SearchBox = () => {
               tempCtx.language === "en" ? "Search city" : "Procurar cidade"
             }
             className={classes.searchBar}
+            className={`${classes.searchBar} ${
+              tempCtx.periodClass !== "" && classes.searchBarNoBorder
+            }`}
             value={query}
             onChange={onChangeHandler}
           />
