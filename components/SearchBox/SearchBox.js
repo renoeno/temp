@@ -60,7 +60,6 @@ const SearchBox = () => {
             placeholder={
               tempCtx.language === "en" ? "Search city" : "Procurar cidade"
             }
-            className={classes.searchBar}
             className={`${classes.searchBar} ${
               tempCtx.periodClass !== "" && classes.searchBarNoBorder
             }`}
