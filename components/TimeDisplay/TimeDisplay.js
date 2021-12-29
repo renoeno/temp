@@ -20,11 +20,14 @@ import LoadingSpinner from "../UI/LoadingSpinner";
 
 const TimeDisplay = (props) => {
   const tempCtx = useContext(TempContext);
+  const convertedTime = useHours(props.offset);
+  const [currentTime, setCurrentTime] = useState(
+    new Date(convertedTime.currentHour)
+  );
 
   const [time, setTime] = useState("");
 
   useEffect(() => {
-    const convertedTime = useHours(props.offset);
     const date = new Date(convertedTime.currentHour);
     const hours =
       date.getHours().toString().length < 2
@@ -44,15 +47,12 @@ const TimeDisplay = (props) => {
     tempCtx.stopLoading();
   }, []);
 
-  // const changeLoadingHandler = () => {
-  //   if (tempCtx.isLoading) {
-  //     tempCtx.stopLoading();
-  //   }
-  // };
+  // useEffect(() => {
+  //   tempCtx.stopLoading();
+  // }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const convertedTime = useHours(props.offset);
       const date = new Date(convertedTime.currentHour);
       const hours =
         date.getHours().toString().length < 2
@@ -68,17 +68,19 @@ const TimeDisplay = (props) => {
           : date.getSeconds();
 
       setTime(hours + ":" + minutes + ":" + seconds);
+      convertedTime.setCurrentTime(props.offset);
+      // console.log(new Date(convertedTime.thisTime));
     }, 1000);
 
     return () => {
-      console.log("CLEAN UP");
+      // console.log("CLEAN UP");
       clearInterval(timer);
     };
-  }, [setTime]);
+  }, [setTime, convertedTime]);
 
   return (
     <>
-      <span>{time}</span>
+      <span className="roboto-title">{time}</span>
     </>
   );
 };

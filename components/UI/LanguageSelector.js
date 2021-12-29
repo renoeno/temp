@@ -13,7 +13,7 @@ const LanguageSelector = () => {
     tempCtx.switchLanguage("" + language);
   };
   return (
-    <div className={classes.languageSelector}>
+    <div className={`${classes.languageSelector} roboto-title`}>
       <div>
         <a
           className={

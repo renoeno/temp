@@ -62,7 +62,7 @@ const SearchBox = () => {
             }
             className={`${classes.searchBar} ${
               tempCtx.periodClass !== "" && classes.searchBarNoBorder
-            }`}
+            } roboto-text`}
             value={query}
             onChange={onChangeHandler}
           />

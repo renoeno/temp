@@ -99,11 +99,11 @@ const CityInfo = (props) => {
   console.log(currentHour, sunriseHour, sunsetHour, dayPeriod);
 
   return (
-    <div className={`${classes.cityInfo}`}>
+    <div className={`${classes.cityInfo} roboto-title`}>
       {tempCtx.isLoading && <LoadingSpinner />}
       {!tempCtx.isLoading && (
         <>
-          <span className={classes.cityName}>{props.cityName}</span>
+          <span className={`${classes.cityName}`}>{props.cityName}</span>
           <span>{props.weather}</span>
           <span>{props.temperature}º</span>
         </>
