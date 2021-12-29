@@ -54,9 +54,22 @@ const City = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+  const paths = cities.map((city) => ({
+    params: {
+      city: `${city.name.toLowerCase().replace(/ /g, "-")}-${city.id}`,
+    },
+  }));
+
+  return {
+    fallback: "blocking",
+    paths,
+  };
+}
+
+export async function getStaticProps(context) {
   const city = getCity(context.params.city);
-  console.log(city);
+  // console.log(city);
 
   if (!city) {
     return {
@@ -74,7 +87,7 @@ export async function getServerSideProps(context) {
     return { notFound: true };
   }
 
-  console.log(data);
+  // console.log(data);
 
   const slug = context.params.city;
 

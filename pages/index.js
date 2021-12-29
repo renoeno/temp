@@ -14,7 +14,7 @@ const Home = () => {
       <Head>
         <title>Temp</title>
         <meta name="description" content="A pretty weather app" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.png" />
       </Head>
       <LanguageSelector />
       <h1>Temp</h1>
