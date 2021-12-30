@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import Layout from "../components/layout/Layout";
 
-import SearchBox from "../components/Searchbox/SearchBox";
+import SearchBox from "../components/searchbox/SearchBox";
 import LanguageSelector from "../components/UI/LanguageSelector";
 
 const Home = () => {

@@ -1,4 +1,4 @@
-import CityInfo from "../../components/CityInfo/CityInfo";
+import CityInfo from "../../components/cityinfo/CityInfo";
 import Layout from "../../components/layout/Layout";
 
 import cities from "../../lib/city.list.json";
