@@ -1,0 +1,71 @@
+.search {
+  margin: 0 auto;
+}
+
+.searchBar {
+  width: 85%;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 2rem;
+  border: 1px solid black;
+  height: 3rem;
+  outline: 0;
+  padding: 1rem;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.searchBarNoBorder {
+  border: none;
+}
+
+.searchBar::placeholder {
+  color: #aaa;
+}
+
+.searchBar:hover {
+  background-color: #eee;
+}
+
+.searchBar:focus {
+  background-color: white;
+}
+
+.search ul {
+  width: 85%;
+  margin: 0 auto;
+  list-style: none;
+  border-radius: 2rem;
+  font-weight: 100;
+  font-size: 1.2rem;
+  background-color: white;
+  border: none;
+  padding: 0;
+}
+
+.search ul li {
+  list-style-position: initial;
+  padding: 0.5rem;
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.search ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+.search ul li:first-child {
+  border-top: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+@media (max-width: 480px) {
+  .cityName {
+    font-size: 6rem;
+  }
+
+  .cityInfo {
+    font-size: 2.5rem;
+  }
+}
