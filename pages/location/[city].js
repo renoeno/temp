@@ -13,7 +13,6 @@ const getCity = (param) => {
   const splitCity = cityParam.split("-");
   const cityId = splitCity[splitCity.length - 2];
   language = splitCity[splitCity.length - 1];
-  console.log(cityId);
 
   if (!cityId) {
     return null;

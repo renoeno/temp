@@ -27,7 +27,6 @@ const SearchBox = () => {
     let matchingCities = [];
 
     if (value.length > 3) {
-      console.log(value);
       for (let city of cities) {
         if (matchingCities.length >= 5) {
           break;

@@ -6,18 +6,6 @@ import { TempContext } from "../../store/temp-context";
 
 import LoadingSpinner from "../UI/LoadingSpinner";
 
-// const convertTime = (offset) => {
-//   const date = new Date();
-//   const localTime = date.getTime();
-//   const localOffset = date.getTimezoneOffset() * 60000;
-
-//   //London hour
-//   const utc = localTime + localOffset;
-//   const currentTime = utc + 3600000 * offset;
-
-//   return currentTime;
-// };
-
 const TimeDisplay = (props) => {
   const tempCtx = useContext(TempContext);
   const convertedTime = useHours(props.offset);
@@ -46,10 +34,6 @@ const TimeDisplay = (props) => {
 
     tempCtx.stopLoading();
   }, []);
-
-  // useEffect(() => {
-  //   tempCtx.stopLoading();
-  // }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {

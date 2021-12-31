@@ -96,7 +96,7 @@ const CityInfo = (props) => {
     tempCtx.changePeriodClass(dayPeriod);
   }, [dayPeriod]);
 
-  console.log(currentHour, sunriseHour, sunsetHour, dayPeriod);
+  // console.log(currentHour, sunriseHour, sunsetHour, dayPeriod);
 
   return (
     <div className={`${classes.cityInfo} roboto-title`}>

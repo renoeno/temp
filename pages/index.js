@@ -6,9 +6,6 @@ import SearchBox from "../components/searchbox/SearchBox";
 import LanguageSelector from "../components/UI/LanguageSelector";
 
 const Home = () => {
-  useEffect(() => {
-    console.log("mounted");
-  }, []);
   return (
     <Layout>
       <Head>
