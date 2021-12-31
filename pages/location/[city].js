@@ -1,5 +1,5 @@
-import CityInfo from "../../components/cityinfo/CityInfo";
-import Layout from "../../components/layout/Layout";
+import CityInfo from "../../components/cityinfo/CityInfo.js";
+import Layout from "../../components/layout/Layout.js";
 
 import cities from "../../lib/city.list.json";
 

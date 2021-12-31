@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Link from "next/link";
 
-import LoadingSpinner from "../UI/LoadingSpinner";
+import LoadingSpinner from "../UI/LoadingSpinner.js";
 
 import cities from "../../lib/city.list.json";
 

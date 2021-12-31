@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 
-import TimeDisplay from "../timedisplay/TimeDisplay";
-import LoadingSpinner from "../UI/LoadingSpinner";
+import TimeDisplay from "../timedisplay/TimeDisplay.js";
+import LoadingSpinner from "../UI/LoadingSpinner.js";
 
 import useHours from "../../hooks/use-hours";
 

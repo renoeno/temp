@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/layout/Layout.js";
 
-import SearchBox from "../components/searchbox/SearchBox";
-import LanguageSelector from "../components/UI/LanguageSelector";
+import SearchBox from "../components/searchbox/SearchBox.js";
+import LanguageSelector from "../components/UI/LanguageSelector.js";
 
 const Home = () => {
   useEffect(() => {
