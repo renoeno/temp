@@ -15,6 +15,12 @@
   font-size: 12rem;
 }
 
+@media (max-width: 840px) {
+  .cityName {
+    font-size: 10rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cityName {
     font-size: 8rem;
