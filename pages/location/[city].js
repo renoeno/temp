@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 import CityInfo from "../../components/cityinfo/CityInfo";
 import Layout from "../../components/layout/Layout";
 
@@ -39,17 +41,22 @@ const getCity = (param) => {
 // };
 
 const City = (props) => {
+  const router = useRouter();
   return (
     <Layout>
-      <CityInfo
-        cityName={props.city.name}
-        weather={props.currentWeather}
-        condition={props.weatherCondition}
-        temperature={props.temperature}
-        offset={props.offset}
-        sunrise={props.sunrise}
-        sunset={props.sunset}
-      />
+      {router.isFallback ? (
+        <div>Loading...</div>
+      ) : (
+        <CityInfo
+          cityName={props.city.name}
+          weather={props.currentWeather}
+          condition={props.weatherCondition}
+          temperature={props.temperature}
+          offset={props.offset}
+          sunrise={props.sunrise}
+          sunset={props.sunset}
+        />
+      )}
     </Layout>
   );
 };
@@ -62,7 +69,7 @@ export async function getStaticPaths() {
   }));
 
   return {
-    fallback: "blocking",
+    fallback: true,
     paths,
   };
 }
