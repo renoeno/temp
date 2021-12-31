@@ -16,7 +16,7 @@ const Layout = (props) => {
   //   console.log("changed");
   // };
 
-  console.log(periodClass);
+  // console.log(periodClass);
   return (
     <>
       <div className={`${classes[periodClass]} ${classes.container}`}>

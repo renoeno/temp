@@ -29,7 +29,6 @@ const TempContextProvider = (props) => {
 
   const changePeriodClassHandler = (hClass) => {
     setPeriodClass(hClass);
-    console.log(periodClass);
   };
 
   const contextValue = {
