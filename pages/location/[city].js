@@ -61,15 +61,15 @@ const City = (props) => {
 };
 
 export async function getStaticPaths() {
-  const paths = cities.map((city) => ({
-    params: {
-      city: `${city.name.toLowerCase().replace(/ /g, "-")}-${city.id}`,
-    },
-  }));
+  // const paths = cities.map((city) => ({
+  //   params: {
+  //     city: `${city.name.toLowerCase().replace(/ /g, "-")}-${city.id}`,
+  //   },
+  // }));
 
   return {
     fallback: true,
-    paths,
+    paths: [],
   };
 }
 
