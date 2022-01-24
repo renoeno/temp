@@ -7,7 +7,7 @@ import cities from "../../lib/city.list.json";
 
 import { TempContext } from "../../store/temp-context";
 
-import classes from "./SearchBox.module.css";
+import classes from "./SearchBox.module.scss";
 
 const SearchBox = () => {
   const tempCtx = useContext(TempContext);
@@ -28,7 +28,7 @@ const SearchBox = () => {
 
     if (value.length > 3) {
       for (let city of cities) {
-        if (matchingCities.length >= 5) {
+        if (matchingCities.length >= 3) {
           break;
         }
 

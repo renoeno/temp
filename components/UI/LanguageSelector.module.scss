@@ -1,0 +1,32 @@
+.languageSelector {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  div {
+    margin: 0 5px;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .selected {
+    border-bottom: solid 3px black;
+
+    @media (max-width: 480px) {
+      border-bottom: solid 2px black;
+    }
+
+    @media (max-width: 320px) {
+      border-bottom: solid 1px black;
+    }
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1rem;
+  }
+}

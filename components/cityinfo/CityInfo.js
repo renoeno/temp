@@ -7,7 +7,7 @@ import useHours from "../../hooks/use-hours";
 
 import { TempContext } from "../../store/temp-context";
 
-import classes from "./CityInfo.module.css";
+import classes from "./CityInfo.module.scss";
 
 const currentPeriod = (currentHour, sunriseHour, sunsetHour, condition) => {
   if (

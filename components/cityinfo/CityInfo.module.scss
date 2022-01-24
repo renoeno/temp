@@ -1,0 +1,58 @@
+.cityInfo {
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1.5rem;
+  animation: showCityInfo 4s;
+
+  span {
+    margin-bottom: 0;
+  }
+
+  .cityName {
+    font-size: 10rem;
+
+    @media (max-width: 840px) {
+      font-size: 9rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 8rem;
+    }
+
+    @media (max-width: 520px) {
+      font-size: 6rem;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
+}
+
+@keyframes showCityInfo {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

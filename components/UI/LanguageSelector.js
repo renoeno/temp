@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { TempContext } from "../../store/temp-context";
 
-import classes from "./LanguageSelector.module.css";
+import classes from "./LanguageSelector.module.scss";
 
 const LanguageSelector = () => {
   const tempCtx = useContext(TempContext);
